@@ -12,7 +12,7 @@ search.addEventListener('submit', async (event)=>{
 
     let chave = "08d385c1a6006098d3f0d82dbe6fb0bf";
 
-    let api2 = `http://api.openweathermap.org/data/2.5/forecast?q=${encodeURI(cidade)}&appid=${chave}&units=metric&lang=pt`;
+    let api2 = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURI(cidade)}&appid=${chave}&units=metric&lang=pt`;
 
     let api = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cidade)}&appid=${chave}&units=metric&lang=pt`;
 
