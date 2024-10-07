@@ -1,0 +1,231 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif
+}
+body{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100dvh;
+}
+.body{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+/*Animação*/
+
+
+/*Fim da animação*/
+@keyframes fadeIn {
+  0%{
+    top: 0;
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100%{
+    top: 4%;
+    opacity: 0;
+    transform: translateY(0px) scale(1);
+  }
+}
+.container{
+  background-color: #eee;
+  width: 350px;
+  max-height: 600px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+}
+.dados{
+  display: none;
+}
+.container form{
+  border: 1px solid #aaa;
+  padding: 6px;
+  display: flex;
+  width: 90%;
+  gap: 15px;
+  align-items: center;
+  margin: 4% auto;
+  border-radius: 10px;
+  max-height: 35px;
+}
+form .icon{
+  justify-self: start;
+  font-size: 18px;
+}
+form input{
+  justify-self: center;
+  border: none;
+  padding: 5px;
+  background: transparent;
+  width: 80%;
+  outline: none;
+  font-size: 16px;
+}
+form button{
+  justify-self: end;
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+form button:hover{
+  color: gray;
+}
+
+.dados .name_city{
+  margin-top: 20px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+  animation-name: animacao1;
+}
+@keyframes flyUD{
+  0%{
+      left: 0;
+  }
+  100%{
+      left: 5px;
+      opacity: 0.5;
+  }
+}
+.dados .tempo{
+  background-color: cornflowerblue;
+  width: 90%;
+  height: 130px;
+  margin: 2% auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.dados .tempo img{
+  position: relative;
+  animation: fadeIn 2s ease-in-out alternate;
+}
+.dados .tempo img{
+  animation: flyUD 2s ease-in-out infinite alternate;
+}
+.descricao .clima{
+  font-size: 45px;
+  font-weight: 600;
+  animation: fadeIn 2s ease-in-out alternate;
+}
+.dados .preve{
+  width: 90%;
+  margin: 3% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.preve .seguinte{
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  width: 70px;
+  padding: 15px;
+  height: 120px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.seguinte img{
+  margin-top: 0;
+  width: 50px;
+  position: relative;
+  animation: flyUD 2s ease-in-out infinite alternate;
+}
+
+.other{
+  width: 90%;
+  margin: 4% auto;
+  border-radius: 20px;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "item1 item2"
+    "item3 item4"
+  ;
+}
+.flex{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+}
+.other .Tmax, 
+.Tmin, .humidade, .vento{
+  height: 50px;
+  background-color: #fff;
+  border-radius: 15px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.Tmax{
+  grid-area: item1;
+}
+.Tmin{
+  grid-area: item2;
+}
+.humidade{
+  grid-area: item3;
+}
+.vento{
+  grid-area: item4;
+}
+.maxC, .minC, 
+.humidP, .ventoP{
+  font-size: 15px;
+  font-weight: 600;
+}
+.Tmax .icon{
+  font-size: 20px;
+  color: red;
+  font-weight: 600;
+}
+.Tmin .icon{
+  font-size: 20px;
+  color: cornflowerblue;
+  font-weight: 600;
+}
+.humidade .icon{
+  font-size: 20px;
+  color: cornflowerblue;
+  font-weight: 600;
+}
+.vento .icon{
+  font-size: 20px;
+  color: cornflowerblue;
+  font-weight: 600;
+}
+.aviso{
+  text-align: center;
+  font-weight: 800;
+  margin: 4% auto;
+}
+@media screen and (max-width: 360px){
+  .container{
+    width: 300px;
+  }
+  .descricao .clima{
+    font-size: 35px;
+  }
+}
